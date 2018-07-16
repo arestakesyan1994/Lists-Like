@@ -362,7 +362,7 @@
                                     <li><i class="fa fa-star" aria-hidden="true"></i></li>
                                     <li><i class="fa fa-star" aria-hidden="true"></i></li>
                                 </ul>
-                                <a href="listing-details-left"><h2 th:text="${u.title}">
+                                <a th:href="@{/blog-details(id=${u.getId()})}"><h2 th:text="${u.title}">
                                     <i class="fa fa-check-circle" aria-hidden="true"></i></h2>
                                 </a>
                                 <p th:text="${u.togs}">,</p>

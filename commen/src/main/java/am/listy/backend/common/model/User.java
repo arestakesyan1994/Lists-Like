@@ -30,4 +30,6 @@ public class User {
     private String facebookUrl;
     private String twitterUrl;
     private String youTubeUrl;
+    private boolean verify;
+    private String token;
 }

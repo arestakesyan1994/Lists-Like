@@ -4,7 +4,6 @@ import am.listy.backend.common.model.Comment;
 import am.listy.backend.common.model.Friend;
 import am.listy.backend.common.model.User;
 import am.listy.backend.common.repository.CommentRepository;
-import am.listy.backend.common.repository.FriendRepository;
 import am.listy.backend.common.repository.ListsRepository;
 import am.listy.backend.common.repository.UserRepository;
 import am.listy.backend.web.security.CurrentUser;
@@ -43,6 +42,7 @@ public class UserController {
         map.addAttribute("userLists", listsRepository.findAllByUser_Email(user1.getEmail()));
         return "guest-profile";
     }
+
 
 }
 

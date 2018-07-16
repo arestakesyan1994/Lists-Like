@@ -1,6 +1,7 @@
 package am.listy.backend.web.config;
 
 //import am.listy.backend.api.security.CurrentUserDetailServiceImpl;
+import am.listy.backend.web.handler.CustomAuthenticationFailureHandler;
 import am.listy.backend.web.security.CurrentUserDetailServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -49,6 +50,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .usernameParameter("email")
                 .passwordParameter("password")
                 .defaultSuccessUrl("/loginSuccess")
+                .failureHandler(new CustomAuthenticationFailureHandler())
                 .permitAll();
     }
 

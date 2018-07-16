@@ -7,24 +7,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <title>Blog details - Listty</title>
+    <title>All business - Listty</title>
 
-    <!-- PLUGINS CSS STYLE -->
-    <link href="plugins/jquery-ui/jquery-ui.min.css" rel="stylesheet"/>
-    <link href="plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
-    <link href="plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet"/>
-    <link href="plugins/listtyicons/style.css" rel="stylesheet"/>
-    <link href="plugins/bootstrapthumbnail/bootstrap-thumbnail.css" rel="stylesheet"/>
-    <link href="plugins/datepicker/datepicker.min.css" rel="stylesheet"/>
-    <link href="plugins/selectbox/select_option1.css" rel="stylesheet"/>
-    <link href="plugins/owl-carousel/owl.carousel.min.css" rel="stylesheet"/>
-    <link href="plugins/slick/slick.css" rel="stylesheet"/>
-    <link href="plugins/slick/slick-theme.css" rel="stylesheet"/>
-    <link href="plugins/fancybox/jquery.fancybox.min.css" rel="stylesheet"/>
-    <link href="plugins/isotope/isotope.min.css" rel="stylesheet"/>
-    <link href="plugins/map/css/map.css" rel="stylesheet"/>
-    <link href="plugins/rateyo/jquery.rateyo.min.css" rel="stylesheet"/>
-    <link href="plugins/animate/animate.css" rel="stylesheet"/>
+    <!-- /plugins CSS STYLE -->
+    <link href="/plugins/jquery-ui/jquery-ui.min.css" rel="stylesheet"/>
+    <link href="/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet"/>
+    <link href="/plugins/listtyicons/style.css" rel="stylesheet"/>
+    <link href="/plugins/bootstrapthumbnail/bootstrap-thumbnail.css" rel="stylesheet"/>
+    <link href="/plugins/datepicker/datepicker.min.css" rel="stylesheet"/>
+    <link href="/plugins/selectbox/select_option1.css" rel="stylesheet"/>
+    <link href="/plugins/owl-carousel/owl.carousel.min.css" rel="stylesheet"/>
+    <link href="/plugins/slick/slick.css" rel="stylesheet"/>
+    <link href="/plugins/slick/slick-theme.css" rel="stylesheet"/>
+    <link href="/plugins/fancybox/jquery.fancybox.min.css" rel="stylesheet"/>
+    <link href="/plugins/isotope/isotope.min.css" rel="stylesheet"/>
+    <link href="/plugins/map/css/map.css" rel="stylesheet"/>
+    <link href="/plugins/rateyo/jquery.rateyo.min.css" rel="stylesheet"/>
+    <link href="/plugins/animate/animate.css" rel="stylesheet"/>
 
     <!-- GOOGLE FONT -->
     <link href="https://fonts.googleapis.com/css?family=Muli:200,300,400,600,700,800,900" rel="stylesheet"/>
@@ -33,9 +33,9 @@
     <link href="https://fonts.googleapis.com/css?family=Herr+Von+Muellerhoff" rel="stylesheet"/>
 
     <!-- CUSTOM CSS -->
-    <link href="css/style.css" rel="stylesheet"/>
+    <link href="/css/style.css" rel="stylesheet"/>
 
-    <link rel="stylesheet" href="css/default.css" id="option_color"/>
+    <link rel="stylesheet" href="/css/default.css" id="option_color"/>
 
     <!-- FAVICON -->
     <link href="img/favicon.png" rel="shortcut icon"/>
@@ -71,9 +71,9 @@
         <div class="nav-wrapper navbarWhite">
             <!-- NAVBAR -->
             <div>
-                <span><a href="/blog-details?lang=hy">Հայերեն</a></span>
-                <span><a href="/blog-details?lang">English</a></span>
-                <span><a href="/blog-details?lang=ru">Русский</a></span>
+                <span><a href="/sign-up?lang=hy">Հայերեն</a></span>
+                <span><a href="/sign-up?lang">English</a></span>
+                <span><a href="/sign-up?lang=ru">Русский</a></span>
             </div>
             <nav id="menuBar" class="navbar navbar-default lightHeader animated " role="navigation">
                 <div class="container">
@@ -127,7 +127,7 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li class=" dropdown singleDrop">
+                            <li class="active dropdown singleDrop">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
                                    aria-haspopup="true" aria-expanded="false">pages <i class="fa fa-angle-down"
                                                                                        aria-hidden="true"></i></a>
@@ -149,7 +149,7 @@
                                     <li><a href="404-page">404 Page</a></li>
                                 </ul>
                             </li>
-                            <li class="active"><a href="blog">blog </a></li>
+                            <li class=""><a href="blog">blog </a></li>
                             <li class=" dropdown singleDrop">
                                 <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown"
                                    role="button" aria-haspopup="true" aria-expanded="false">admin <i
@@ -179,233 +179,16 @@
     </header>
 
 
-    <!-- BLOG DETAILS -->
-    <section class="clearfix blogDetials">
+
+    <!-- SIGN UP SECTION -->
+    <section class="clearfix signUpSection">
         <div class="container">
-            <div class="listContent" th:if="${oneLists!= null}">
-                <h2 style="color: #305aff" th:text="${oneLists.title}"></h2>
-                <ul class="list-inline rating" th:if="${!isLoggedIn}">
-                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                </ul>
 
-                <!--<fieldset class="rating">-->
-                <!--<input type="radio" id="star5" name="rating" value="5" />-->
-                <!--<label class = "full" for="star5" title="Awesome - 5 stars"></label>-->
-                <!--<input type="radio" id="star4half" name="rating" value="4 and a half" />-->
-                <!--<label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>-->
-                <!--<input type="radio" id="star4" name="rating" value="4" />-->
-                <!--<label class = "full" for="star4" title="Pretty good - 4 stars"></label>-->
-                <!--<input type="radio" id="star3half" name="rating" value="3 and a half" />-->
-                <!--<label class="half" for="star3half" title="Meh - 3.5 stars"></label>-->
-                <!--<input type="radio" id="star3" name="rating" value="3" />-->
-                <!--<label class = "full" for="star3" title="Meh - 3 stars"></label>-->
-                <!--<input type="radio" id="star2half" name="rating" value="2 and a half" />-->
-                <!--<label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>-->
-                <!--<input type="radio" id="star2" name="rating" value="2" />-->
-                <!--<label class = "full" for="star2" title="Kinda bad - 2 stars"></label>-->
-                <!--<input type="radio" id="star1half" name="rating" value="1 and a half" />-->
-                <!--<label class="half" for="star1half" title="Meh - 1.5 stars"></label>-->
-                <!--<input type="radio" id="star1" name="rating" value="1" />-->
-                <!--<label class = "full" for="star1" title="Sucks big time - 1 star"></label>-->
-                <!--<input type="radio" id="starhalf" name="rating" value="half" />-->
-                <!--<label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>-->
-                <!--</fieldset><br> -->
+            <h2 style="color: darkred">Sorry, Your account is Denied!!!</h2>
+            <h2 style="color: darkred"> Please check your email in order to active. :)</h2>
 
-
-                <ul class="list-inline rating" th:if="${isLoggedIn}">
-                    <form th:action="@{/addRating}" method="post" th:object="${rating}"
-                          class="listing__form">
-                        <button class="fa fa-star-o" th:field="*{rating}">
-                            <input type="hidden" name="id" th:value="${oneLists.getId()}">
-                            <input type="hidden" name="id1" th:value="1">
-                        </button>
-                    </form>
-                    <form th:action="@{/addRating}" method="post" th:object="${rating}"
-                          class="listing__form">
-                        <button class="fa fa-star-o" aria-hidden="true" th:field="*{rating}">
-                            <input type="hidden" name="id" th:value="${oneLists.getId()}">
-                            <input type="hidden" name="id1" th:value="2">
-                        </button>
-                    </form>
-                    <form th:action="@{/addRating}" method="post" th:object="${rating}"
-                          class="listing__form">
-                        <button class="fa fa-star-o" aria-hidden="true" th:field="*{rating}">
-                            <input type="hidden" name="id" th:value="${oneLists.getId()}">
-                            <input type="hidden" name="id1" th:value="3">
-                        </button>
-                    </form>
-                    <form th:action="@{/addRating}" method="post" th:object="${rating}"
-                          class="listing__form">
-                        <button class="fa fa-star-o" aria-hidden="true" th:field="*{rating}">
-                            <input type="hidden" name="id" th:value="${oneLists.getId()}">
-                            <input type="hidden" name="id1" th:value="4">
-                        </button>
-                    </form>
-                    <form th:action="@{/addRating}" method="post" th:object="${rating}"
-                          class="listing__form">
-                        <button class="fa fa-star-o" aria-hidden="true" th:field="*{rating}">
-                            <input type="hidden" name="id" th:value="${oneLists.getId()}">
-                            <input type="hidden" name="id1" th:value="5">
-                        </button>
-                    </form>
-                </ul>
-                <div class="row">
-                    <div class="col-sm-8 col-xs-12">
-                        <div class="categoryImage">
-                            <img th:src="@{/image(fileName=${oneLists.getPicUrl()})}" alt="Image category"
-                                 class="img-responsive img-rounded">
-                            <span class="label label-primary">Verified</span>
-                        </div>
-                    </div>
-                    <div class="col-sm-7 col-xs-12">
-                        <div class="categoryDetails">
-                            <ul class="list-inline captionItem">
-                                <li><i class=" fa fa-heart-o" th:text="${oneLists.like.size()}"></i></li>
-                            </ul>
-                            <ul th:text="${oneLists.togs}"></ul>
-                            <a th:href="@{/guest-profile(id=${oneLists.getUser().getId()})}">
-                                <i class="media-heading" th:text="${oneLists.getUser().username}">
-                                </i></a>
-                            <h2>
-                                <ul class="placeName" th:text="${oneLists.getRegion().name}"></ul>
-                            </h2>
-                        </div>
-                        <ul th:text="${oneLists.description}"></ul>
-                        <!--<div class="embed-responsive embed-responsive-16by9">-->
-                            <!--<div class="iframWrapper">-->
-                                <!--<iframe scrolling="no" frameborder="no" th:src="${oneLists.getWebsite()}"></iframe>-->
-                            <!--</div>-->
-                            <!--&lt;!&ndash;<img th:if="${oneLists.videoUrl!=null}" class="embed-responsive-item"&ndash;&gt;-->
-                                    <!--&lt;!&ndash;th:src="${oneLists.videoUrl}">&ndash;&gt;-->
-                        <!--</div>-->
-                        <!--<div class="embed-responsive embed-responsive-16by9">-->
-                            <!--<img th:if="${oneLists.website!=null}" class="embed-responsive-item"-->
-                                    <!--th:src="${oneLists.website}">-->
-                        <!--</div>-->
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-sm-8 col-xs-12">
-                    <div class="thumbnail blogContent">
-                        <div class="caption">
-                            <ul class="list-inline socialLink">
-                                <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="media media-comment" th:each="c:${comments}">
-                        <div class="media-left">
-                            <img th:src="@{/image(fileName=${c.getUser().getPicUrl()})}" class="media-object img-circle"
-                                 alt="Image User"/>
-                        </div>
-                        <div class="media-body">
-                            <h4 class="media-heading">
-                                <i class="media-heading" th:text="${c.getUser().name}"></i>
-                                <i class="media-heading" th:text="${c.getUser().surname}"></i><br>
-                                <a th:href="@{/guest-profile(id=${c.getUser().getId()})}">
-                                    <i class="media-heading" th:text="${c.getUser().username}">
-                                    </i></a></h4>
-                            <h4 class="media-heading" th:text="${c.getUser().getSurname()}"></h4>
-                            <p th:text="${c.getDescription()}"></p>
-                        </div>
-                    </div>
-
-                    <div class="commentArea">
-                        <h3>Leave A Comment</h3>
-                        <main>
-                            <div th:if="${isLoggedIn}">
-                                <form th:action="@{/addListsComment}" th:object="${commentLists}" method="post"
-                                      enctype="multipart/form-data">
-                                    <div class="formSection formSpace">
-                                        <div class="form-group">
-                                            <textarea th:field="*{description}" placeholder="Comment"></textarea><br/>
-                                        </div>
-                                        <div class="form-group mb0">
-                                            <button type="submit" class="btn btn-primary">Send Review
-                                                <input type="hidden" name="id" th:value="${oneLists.id}"></button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </main>
-
-                        <div th:if="${!isLoggedIn}">
-                            <form action="#">
-                                <div class="formSection formSpace">
-                                    <div class="form-group">
-                                        <input class="form-control" placeholder="Comment"/>
-                                    </div>
-                                    <div class="form-group mb0">
-                                        <button type="submit" class="btn btn-primary">Send Review</button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
-
-
-    <div class="option">
-        <i class="option-switcher-btn fa fa-gear hidden-xs"></i>
-        <div class="option-switcher animated">
-            <div class="themes-dropdown">
-                <div class="dropdown">
-                    <a class="btn dropdown-toggle" href="#" id="dropdownMenuLink" data-toggle="dropdown"
-                       aria-haspopup="true" aria-expanded="false"> Premium Themes </a>
-                    <div class="dropdown-menu" id="ajaxContent" aria-labelledby="dropdownMenuLink"></div>
-                </div>
-            </div>
-            <div class="option-swticher-header">
-                <div class="option-switcher-heading">Theme Option</div>
-                <div class="theme-close"><i class="fa fa-close"></i></div>
-            </div>
-            <div class="option-swticher-body">
-                <span class="subtitle">Color Options</span>
-                <ul class="list-unstyled color-options">
-                    <li class="theme-default theme-active" data-color="default" data-logo="default-logo"></li>
-                    <li class="theme-color1" data-color="color-option1" data-logo="logo1"></li>
-                    <li class="theme-color2" data-color="color-option2" data-logo="logo2"></li>
-                    <li class="theme-color3" data-color="color-option3" data-logo="logo3"></li>
-                    <li class="theme-color4" data-color="color-option4" data-logo="logo4"></li>
-                </ul>
-                <span class="subtitle">Layout style</span>
-                <div class="no-col-space">
-                    <a href="javascript:void(0);" class="btn-u active-switcher-btn wide-layout-btn">Wide</a>
-                    <a href="javascript:void(0);" class="btn-u boxed-layout-btn">Boxed</a>
-                </div>
-                <div class="bg-patern">
-                    <span class="subtitle">Background pattern</span>
-                    <ul class="list-unstyled">
-                        <li class="pattern-default pattern-active"></li>
-                        <li class="pattern1"></li>
-                        <li class="pattern2"></li>
-                        <li class="pattern3"></li>
-                    </ul>
-                </div>
-                <span class="subtitle">Header style</span>
-                <div class="no-col-space">
-                    <a href="javascript:void(0);" class="btn-u static-header">Static</a>
-                    <a href="javascript:void(0);" class="btn-u fixed-header">Fixed</a>
-                </div>
-            </div>
-            <a href="http://www.iamabdus.com" target="_blank" class="btn-purchase"><i class="fa fa-shopping-cart"></i>
-                Buy This Theme</a>
-        </div>
-    </div>
-
 
     <!-- FOOTER -->
     <footer style="background-image: url(img/background/bg-footer.jpg);">
@@ -515,7 +298,7 @@
                 <form class="loginForm">
                     <div class="form-group">
                         <i class="fa fa-envelope" aria-hidden="true"></i>
-                        <input type="email" class="form-control" id="email" placeholder="Email">
+                        <input type="text" class="form-control" id="email" placeholder="Email">
                     </div>
                     <div class="form-group">
                         <i class="fa fa-lock" aria-hidden="true"></i>
@@ -530,38 +313,60 @@
                     </div>
 
                 </form>
+
+
             </div>
             <div class="modal-footer">
-                <p>Don’t have an Account? <a href="sign-up" class="link">Sign up</a></p>
+                <p>Don’t have an Account? <a href="/sign-up" class="link">Sign up</a></p>
             </div>
         </div>
     </div>
 </div>
 
 <!-- JAVASCRIPTS -->
-<script src="plugins/jquery/jquery.min.js"></script>
-<script src="plugins/jquery-ui/jquery-ui.min.js"></script>
-<script src="plugins/bootstrap/js/bootstrap.min.js"></script>
-<script src="plugins/smoothscroll/SmoothScroll.min.js"></script>
-<script src="plugins/waypoints/waypoints.min.js"></script>
-<script src="plugins/counter-up/jquery.counterup.min.js"></script>
-<script src="plugins/datepicker/bootstrap-datepicker.min.js"></script>
-<script src="plugins/selectbox/jquery.selectbox-0.1.3.min.js"></script>
-<script src="plugins/owl-carousel/owl.carousel.min.js"></script>
-<script src="plugins/slick/slick.min.js"></script>
-<script src="plugins/isotope/isotope.min.js"></script>
-<script src="plugins/fancybox/jquery.fancybox.min.js"></script>
-<script src="plugins/isotope/isotope-triger.min.js"></script>
-<script src="plugins/rateyo/jquery.rateyo.min.js"></script>
+<script src="/plugins/jquery/jquery.min.js"></script>
+<script src="/plugins/jquery-ui/jquery-ui.min.js"></script>
+<script src="/plugins/bootstrap/js/bootstrap.min.js"></script>
+<script src="/plugins/smoothscroll/SmoothScroll.min.js"></script>
+<script src="/plugins/waypoints/waypoints.min.js"></script>
+<script src="/plugins/counter-up/jquery.counterup.min.js"></script>
+<script src="/plugins/datepicker/bootstrap-datepicker.min.js"></script>
+<script src="/plugins/selectbox/jquery.selectbox-0.1.3.min.js"></script>
+<script src="/plugins/owl-carousel/owl.carousel.min.js"></script>
+<script src="/plugins/slick/slick.min.js"></script>
+<script src="/plugins/isotope/isotope.min.js"></script>
+<script src="/plugins/fancybox/jquery.fancybox.min.js"></script>
+<script src="/plugins/isotope/isotope-triger.min.js"></script>
+<script src="/plugins/rateyo/jquery.rateyo.min.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBEDfNcQRmKQEyulDN8nGWjLYPm8s4YB58"></script>
-<script src="plugins/map/js/rich-marker.js"></script>
-<script src="plugins/map/js/infobox_packed.js"></script>
-<script src="js/single-map.js"></script>
-<script src="js/map.js"></script>
-<script src="js/custom.js"></script>
+<script src="/plugins/map/js/rich-marker.js"></script>
+<script src="/plugins/map/js/infobox_packed.js"></script>
+<script src="/js/single-map.js"></script>
+<script src="/js/map.js"></script>
+<script src="/js/custom.js"></script>
 
-<link href="options/optionswitch.css" rel="stylesheet"/>
-<script src="options/optionswitcher.js"></script>
+<link href="/options/optionswitch.css" rel="stylesheet"/>
+<script src="/options/optionswitcher.js"></script>
+<script>
+    function f() {
+        var pass = document.getElementById("passwordFirst");
+        var confirm = document.getElementById("passwordAgain");
+        var email = document.getElementById("emailAddress");
+        var reg = new RegExp(/^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i);
+        if (!reg.test(email.value)) {
+            email.style.backgroundColor = "blueviolet";
+        }
+        if (pass.value !== confirm.value) {
+            pass.value = "";
+            confirm.value = "";
+            pass.placeholder = "Please input your password";
+            confirm.placeholder = "Please repeat tour password";
+            pass.style.backgroundColor = "red";
+            confirm.style.backgroundColor = "red";
+        }
+    }
+
+</script>
 </body>
 
 </html>

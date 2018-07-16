@@ -1,5 +1,6 @@
 package am.listy.backend.web.controller;
 
+import am.listy.backend.common.mail.EmailServiceImpl;
 import am.listy.backend.common.model.*;
 import am.listy.backend.common.repository.*;
 import am.listy.backend.common.repository.SubjectRepository;
@@ -8,6 +9,7 @@ import org.apache.tomcat.util.http.fileupload.IOUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -21,6 +23,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.UUID;
 
 @Controller
 public class AdminController {
@@ -39,9 +42,6 @@ public class AdminController {
 
     @Autowired
     private CategoryRepository categoryRepository;
-
-    @Autowired
-    private PasswordEncoder passwordEncoder;
 
     @Value("${image.folder}")
     private String imageUploadDir;
@@ -64,13 +64,6 @@ public class AdminController {
         return "addCategory";
     }
 
-    @PostMapping("/addUser")
-    public String addUser(@ModelAttribute("user") User user) {
-        user.setType(UserType.USER);
-        user.setPassword(passwordEncoder.encode(user.getPassword()));
-        userRepository.save(user);
-        return "redirect:/sign-up";
-    }
 
     @PostMapping("/add-listings")
     public String addLists(@AuthenticationPrincipal CurrentUser currentUser,
